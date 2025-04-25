@@ -1,4 +1,3 @@
-/* mobile-styles.css */
 @media (max-width: 1024px) {
     .section-social,
     .section-tokenomics,
@@ -11,14 +10,16 @@
     .section-faq,
     .section-mission {
         padding: 1.5rem;
+        margin: 2rem auto; /* Increased margin for separation */
     }
 
     .milestone-climb {
         padding: 1rem;
+        margin: 0.5rem 0; /* Reduced to fit within section */
     }
 
     .milestone-card {
-        margin: 1rem 0;
+        margin: 0.75rem 0; /* Adjusted for consistent spacing */
         padding: 1rem;
     }
 }
@@ -90,13 +91,21 @@
         color: #00f7d2;
     }
 
-    /* Disable hover effects on mobile nav-links */
+    /* Disable hover effects on mobile nav-links and other elements */
     @media (hover: none) {
         .nav-links a:hover {
             color: #fff;
         }
         .hamburger:hover {
             color: #00f7d2 !important;
+        }
+        .milestone-card:hover {
+            transform: none; /* Disable hover transform to prevent overlap */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Maintain shadow */
+        }
+        .section-milestones:hover {
+            transform: none; /* Disable section hover transform */
+            box-shadow: 0 0 25px rgba(0, 247, 210, 0.5); /* Maintain shadow */
         }
     }
 
@@ -116,9 +125,18 @@
     /* Sections */
     .section {
         padding: 1rem;
-        margin: 1rem;
-        max-width: 95%;
+        margin: 3rem auto !important; /* Increased margin for better separation */
+        max-width: 98%;
     }
+
+    .section-milestones{
+        margin-top: 120px auto!important;
+    }
+
+    .section-mission{
+        margin-top: 8rem !important;
+        margin-bottom: 2rem !important;
+        }
 
     /* Headings */
     .section h2 {
@@ -133,7 +151,6 @@
     /* Lists */
     .tokenomics li,
     .milestones li,
-    .community-hub li
     .community-hub li,
     .faq li,
     .mission li {
@@ -167,6 +184,13 @@
         height: 25px;
         top: -35px;
     }
+
+    /* Speech Bubble for Milestones */
+    .section-milestones .speech-bubble {
+        bottom: -40px; /* Adjusted to stay within section */
+        left: 20px;
+        z-index: 2; /* Ensure below milestone cards */
+    }
 }
 
 @media (max-width: 640px) {
@@ -181,6 +205,7 @@
     .section-faq,
     .section-mission {
         padding: 1rem;
+        margin: 1.5rem auto; /* Consistent margin for separation */
     }
 
     .milestone-card,
@@ -189,6 +214,7 @@
     .mission-card,
     .faq-item {
         padding: 0.75rem;
+        margin: 0.5rem 0; /* Adjusted for tighter but safe spacing */
     }
 
     .header h1 {
