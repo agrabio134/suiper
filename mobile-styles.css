@@ -1,0 +1,207 @@
+/* mobile-styles.css */
+@media (max-width: 1024px) {
+    .section-social,
+    .section-tokenomics,
+    .section-milestones,
+    .section-utility,
+    .section-how-to-buy,
+    .section-meme-generator,
+    .section-community-hub,
+    .section-super-stats,
+    .section-faq,
+    .section-mission {
+        padding: 1.5rem;
+    }
+
+    .milestone-climb {
+        padding: 1rem;
+    }
+
+    .milestone-card {
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    .header p {
+        font-size: 1rem;
+    }
+
+    /* Navigation */
+    .hamburger {
+        display: block;
+        z-index: 1001;
+        padding: 0.5rem;
+        cursor: pointer;
+        color: #00f7d2 !important; /* Ensure consistent color */
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .hamburger i {
+        color: #00f7d2 !important; /* Explicitly set icon color */
+    }
+    .hamburger:hover, .hamburger:active, .hamburger:focus {
+        color: #00f7d2 !important;
+    }
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #1a1a3a;
+        padding: 1rem;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #1a1a3a;
+        padding: 1rem;
+        border-bottom: 3px solid #00f7d2;
+        z-index: 999;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .nav-links a {
+        font-size: 1.5rem;
+        padding: 0.75rem 0;
+        color: #fff;
+        text-align: center;
+        pointer-events: auto;
+        transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+        color: #00f7d2;
+    }
+
+    /* Disable hover effects on mobile nav-links */
+    @media (hover: none) {
+        .nav-links a:hover {
+            color: #fff;
+        }
+        .hamburger:hover {
+            color: #00f7d2 !important;
+        }
+    }
+
+    /* Suiperman Emblem */
+    .suiperman-emblem {
+        width: 150px;
+        height: 225px;
+        margin-top: 40px;
+    }
+
+    /* Suiperman Image */
+    .suiperman-img {
+        width: 150px;
+        height: 225px;
+    }
+
+    /* Sections */
+    .section {
+        padding: 1rem;
+        margin: 1rem;
+        max-width: 95%;
+    }
+
+    /* Headings */
+    .section h2 {
+        font-size: 1.75rem;
+    }
+
+    /* Paragraphs */
+    .section p {
+        font-size: 0.9rem;
+    }
+
+    /* Lists */
+    .tokenomics li,
+    .milestones li,
+    .community-hub li
+    .community-hub li,
+    .faq li,
+    .mission li {
+        font-size: 0.85rem;
+    }
+
+    /* Subheadings */
+    .milestone-card h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Grids */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hype Meter */
+    .hype-meter {
+        right: 5px;
+        padding: 0.5rem;
+    }
+    .hype-meter h2 {
+        font-size: 0.9rem;
+    }
+    .hype-meter-bar {
+        width: 15px;
+        height: 120px;
+    }
+    .suiperman-signal {
+        width: 25px;
+        height: 25px;
+        top: -35px;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-social,
+    .section-tokenomics,
+    .section-milestones,
+    .section-utility,
+    .section-how-to-buy,
+    .section-meme-generator,
+    .section-community-hub,
+    .section-super-stats,
+    .section-faq,
+    .section-mission {
+        padding: 1rem;
+    }
+
+    .milestone-card,
+    .token-card,
+    .utility-card,
+    .mission-card,
+    .faq-item {
+        padding: 0.75rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .speech-bubble {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .locked-overlay {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}

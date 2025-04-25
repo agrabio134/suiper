@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SUIPERMAN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/assets/mascot.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Background Shapes -->
+    <div class="bg-shapes">
+        <svg class="shape shape-1" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#00f7d2" /><text x="25" y="30" font-size="20" fill="#fff"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-2" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#ffff00" /><text x="25" y="30" font-size="20" fill="#000"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-3" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#ff0000" /><text x="25" y="30" font-size="20" fill="#fff"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-4" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#00f7d2" /><text x="25" y="30" font-size="20" fill="#fff"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-5" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#00f7d2" /><text x="25" y="30" font-size="20" fill="#fff"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-6" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#ffff00" />< wickedtext x="25" y="30" font-size="20" fill="#000"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-7" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#ff0000" /><text x="25" y="30" font-size="20" fill="#fff"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-8" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#00f7d2" /><text x="25" y="30" font-size="20" fill="#fff"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-9" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#ffff00" /><text x="25" y="30" font-size="20" fill="#000"
+                text-anchor="middle">S</text>
+        </svg>
+        <svg class="shape shape-10" viewBox="0 0 50 50">
+            <path d="M25 5L45 15L35 45L15 45L5 15Z" fill="#ff0000" /><text x="25" y="30" font-size="20" fill="#fff"
+                text-anchor="middle">S</text>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-bar">
+        <div class="nav-links">
+            <a href="#header" class="link-hover">Home</a>
+            <a href="#social" class="link-hover">Connect</a>
+            <a href="#tokenomics" class="link-hover">Tokenomics</a>
+            <a href="#milestones" class="link-hover">Milestones</a>
+            <a href="#how-to-buy" class="link-hover">Buy</a>
+        </div>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+
+    <!-- Hype Meter -->
+    <div class="hype-meter" id="hype-meter">
+        <h2 class="comic-text"><i class="fas fa-fire"></i> Hype</h2>
+        <div class="hype-meter-bar" id="hype-meter-bar">
+            <div class="hype-meter-fill" id="hype-meter-fill"></div>
+            <div class="suiperman-signal"></div>
+        </div>
+        <h2 class="comic-text">Meter</h2>
+        <div class="speech-bubble" style="top: -80px; left: 50%; transform: translateX(-50%)">Suiperman to the Rescue!
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-6 parallax">
+        <!-- Hero Section -->
+        <div class="header hover-glow" id="header">
+            <div class="suiperman-emblem">
+                <img src="assets/photo_5787459347960416825_y.jpg" alt="Suiperman"
+                    class="suiperman-img animate-pulse-slow" />
+            </div>
+            <h1 class="comic-text"><i class="fas fa-bolt"></i> $SUIPERMAN Token <i class="fas fa-bolt"></i></h1>
+            <p class="comic-text">It’s a bird, it’s a plane, no, it’s Suiperman!</p>
+            <p class="comic-text">Saving Sui with Super-Speed Meme Power</p>
+            <a href="#how-to-buy" class="join-button comic-text">Join the Rescue!</a>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown comic-text">
+            Launch Countdown: <span id="countdown">SOON</span>
+        </div>
+
+        <!-- Social Links -->
+        <div class="section section-social fly-in parallax-section hover-glow" id="social">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-coins mr-2"></i>
+                Connect with Suiperman!</h2>
+            <p class="link-social">CA: <span class="highlight">SOON</span></p>
+            <p class="link-social">Telegram: <span class="highlight">SOON</span></p>
+            <p class="link-social">X (Twitter): <span class="highlight">SOON</span></p>
+            <div class="speech-bubble" style="top: -60px; left: 50%; transform: translateX(-50%)">SUI-PER!</div>
+        </div>
+
+        <!-- Tokenomics -->
+        <div class="section section-tokenomics fly-in hover-glow" id="tokenomics">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-coins mr-2"></i>
+                Kryptonite-Proof Tokenomics</h2>
+            <p class="text-lg md:text-xl text-black mb-6">Total Supply: <span
+                    class="text-blue-600 font-bold">10,000,000,000</span></p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div
+                    class="token-card bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-white font-semibold"><i class="fas fa-code mr-2"></i> 5% Dev</p>
+                    <p class="text-white text-sm">Fortress of Staking</p>
+                </div>
+                <div
+                    class="token-card bg-gradient-to-br from-green-500 to-green-700 p-4 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-white font-semibold"><i class="fas fa-bullhorn mr-2"></i> 5% Marketing</p>
+                    <p class="text-white text-sm">Super-Speed Promotions</p>
+                </div>
+                <div
+                    class="token-card bg-gradient-to-br from-purple-500 to-purple-700 p-4 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-white font-semibold"><i class="fas fa-water mr-2"></i> 20% Liquidity Pool</p>
+                    <p class="text-white text-sm">Kryptonite-Proof</p>
+                </div>
+                <div
+                    class="token-card bg-gradient-to-br from-red-500 to-red-700 p-4 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-white font-semibold"><i class="fas fa-users mr-2"></i> 60% Public</p>
+                    <p class="text-white text-sm">Man of Steel HODLing</p>
+                </div>
+                <div
+                    class="token-card bg-gradient-to-br from-yellow-500 to-yellow-600 p-4 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-white font-semibold"><i class="fas fa-gift mr-2"></i> 10% Community Rewards</p>
+                    <p class="text-white text-sm">Cape of Decentralization</p>
+                </div>
+            </div>
+            <div class="speech-bubble" style="top: -60px; right: 20px">KAPOW!</div>
+        </div>
+
+        <!-- Milestones (Enhanced Climbing Style) -->
+        <div class="section section-milestones fly-in parallax-section hover-glow" id="milestones">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-mountain"></i> Suiperman’s Climb to the Stars</h2>
+            <div class="milestone-climb">
+                <div class="milestone-card bg-gradient-to-br from-blue-500 to-blue-700 text-white">
+                    <i class="fas fa-flag-checkered text-yellow-400"></i>
+                    <h3 class="text-2xl comic-text text-yellow-400 mb-4">$100K Market Cap</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-gift mr-2 text-green-400"></i> Airdrop for Stakers</li>
+                        <li class="flex items-center"><i class="fas fa-bullhorn mr-2 text-green-400"></i> Launch Hype Campaign</li>
+                        <li class="flex items-center"><i class="fas fa-list mr-2 text-green-400"></i> Initial DEX Listings</li>
+                    </ul>
+                </div>
+                <div class="milestone-card bg-gradient-to-br from-green-500 to-green-700 text-white">
+                    <i class="fas fa-fire text-yellow-400"></i>
+                    <h3 class="text-2xl comic-text text-yellow-400 mb-4">$500K Market Cap</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-burn mr-2 text-yellow-400"></i> Burn 50M Tokens</li>
+                        <li class="flex items-center"><i class="fas fa-trophy mr-2 text-yellow-400"></i> Meme Contest with Rewards</li>
+                        <li class="flex items-center"><i class="fas fa-users mr-2 text-yellow-400"></i> Community Expansion</li>
+                    </ul>
+                </div>
+                <div class="milestone-card bg-gradient-to-br from-purple-500 to-purple-700 text-white">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <h3 class="text-2xl comic-text text-yellow-400 mb-4">$1M Market Cap</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-building mr-2 text-blue-400"></i> CEX Listing</li>
+                        <li class="flex items-center"><i class="fas fa-trophy mr-2 text-blue-400"></i> Rewards for top Raiders</li>
+                        <li class="flex items-center"><i class="fas fa-gift mr-2 text-blue-400"></i> NFT Airdrop for Stakers</li>
+                        <li class="flex items-center"><i class="fas fa-bullhorn mr-2 text-blue-400"></i> Influencer Partnerships</li>
+                    </ul>
+                </div>
+                <div class="milestone-card bg-gradient-to-br from-red-500 to-red-700 text-white">
+                    <i class="fas fa-rocket text-yellow-400"></i>
+                    <h3 class="text-2xl comic-text text-yellow-400 mb-4">$5M Market Cap</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-burn mr-2 text-red-400"></i> Burn 100M Tokens</li>
+                        <li class="flex items-center"><i class="fas fa-globe mr-2 text-red-400"></i> Global Marketing Push</li>
+                        <li class="flex items-center"><i class="fas fa-unlock mr-2 text-red-400"></i> Unlock Viral Content Engines</li>
+                    </ul>
+                </div>
+                <div class="milestone-card bg-gradient-to-br from-yellow-500 to-yellow-700 text-white">
+                    <i class="fas fa-crown text-yellow-400"></i>
+                    <h3 class="text-2xl comic-text text-yellow-400 mb-4">$10M+ Market Cap</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-trophy mr-2 text-yellow-400"></i> Premium Staker Rewards</li>
+                        <li class="flex items-center"><i class="fas fa-star mr-2 text-yellow-400"></i> Top-Tier CEX Listings</li>
+                        <li class="flex items-center"><i class="fas fa-link mr-2 text-yellow-400"></i> Cross-Chain Bridge</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="speech-bubble" style="bottom: -60px; left: 20px">CLIMB!</div>
+        </div>
+
+        <!-- Utility -->
+        <!-- <div class="section section-utility fly-in hover-glow" id="utility">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-tools"></i> Saving Sui, One
+                Meme at a Time</h2>
+            <div
+                class="bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl border-3 border-black shadow-lg hover:shadow-2xl transition-all duration-500">
+                <p class="text-lg text-black">
+                    With <span class="text-blue-600 font-bold">Super-Speed Transactions</span> and the <span
+                        class="text-blue-600 font-bold">Cape of Decentralization</span>, $SUIPERMAN powers:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+                    <div
+                        class="utility-card flex items-center p-4 bg-white rounded-lg border-2 border-blue-600 hover:scale-105 transition-transform duration-300">
+                        <i class="fas fa-laugh-beam text-blue-600 text-2xl mr-3"></i>
+                        <p class="text-black">Meme Generators</p>
+                    </div>
+                    <div
+                        class="utility-card flex items-center p-4 bg-white rounded-lg border-2 border-blue-600 hover:scale-105 transition-transform duration-300 blurred-locked">
+                        <i class="fas fa-fire text-blue-600 text-2xl mr-3"></i>
+                        <p class="text-black">Viral Content Engines</p>
+                        <div class="locked-overlay"><i class="fas fa-lock"></i></div>
+                    </div>
+                    <div
+                        class="utility-card flex items-center p-4 bg-white rounded-lg border-2 border-blue-600 hover:scale-105 transition-transform duration-300 blurred-locked">
+                        <i class="fas fa-trophy text-blue-600 text-2xl mr-3"></i>
+                        <p class="text-black">NFT-based Meme Competitions</p>
+                        <div class="locked-overlay"><i class="fas fa-lock"></i></div>
+                    </div>
+                </div>
+                <p class="text-lg text-black mt-4">Boosting the Sui ecosystem with unstoppable meme power!</p>
+            </div>
+            <div class="speech-bubble" style="top: -60px; left: 20px">WHOOSH!</div>
+        </div> -->
+
+        <!-- Mission -->
+        <div class="section section-mission fly-in parallax-section hover-glow" id="mission">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-shield-alt"></i>
+                Suiperman’s Mission</h2>
+            <p class="text-lg text-black mb-6">It’s a bird, it’s a plane, no, it’s Suiperman! Our hero is here to save
+                the Sui blockchain with:</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                    class="mission-card bg-gradient-to-br from-yellow-400 to-yellow-600 p-5 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <i class="fas fa-eye text-blue-600 text-2xl mb-2"></i>
+                    <p class="text-white font-semibold">X-Ray Vision Analytics for transparency</p>
+                </div>
+                <div
+                    class="mission-card bg-gradient-to-br from-blue-400 to-blue-600 p-5 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <i class="fas fa-bolt text-yellow-400 text-2xl mb-2"></i>
+                    <p class="text-white font-semibold">Super-Speed Transactions for efficiency</p>
+                </div>
+                <div
+                    class="mission-card bg-gradient-to-br from-red-400 to-red-600 p-5 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <i class="fas fa-hand-holding-heart text-blue-400 text-2xl mb-2"></i>
+                    <p class="text-white font-semibold">Man of Steel HODLing for community strength</p>
+                </div>
+                <div
+                    class="mission-card bg-gradient-to-br from-green-400 to-green-600 p-5 rounded-lg border-3 border-black shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <i class="fas fa-lock text-yellow-400 text-2xl mb-2"></i>
+                    <p class="text-white font-semibold">Kryptonite-Proof Liquidity for stability</p>
+                </div>
+            </div>
+            <a href="#how-to-buy" class="join-button comic-text mt-6 link-mission">Join the Mission!</a>
+            <div class="speech-bubble" style="bottom: -60px; right: 20px">HERO!</div>
+        </div>
+
+        <!-- How to Buy -->
+        <div class="section section-how-to-buy fly-in hover-glow" id="how-to-buy">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-shopping-cart"></i> How to
+                Join Suiperman?</h2>
+            <div
+                class="bg-gradient-to-br from-green-100 to-green-200 p-6 rounded-xl border-3 border-black shadow-lg hover:shadow-2xl transition-all duration-500">
+                <p class="text-lg text-black mb-4">Get ready! $SUIPERMAN is launching soon on:</p>
+                <a href="https://app.moonbags.io/" target="_blank" rel="noopener noreferrer"
+                    class="link-buy link-hover flex items-center bg-green-500 text-white font-bold py-3 px-6 rounded-lg border-2 border-black hover:bg-green-600 hover:scale-105 transition-all duration-300">
+                    <i class="fas fa-arrow-right mr-2"></i> Moonbags.io
+                </a>
+                <p class="text-sm text-black mt-4">Stay tuned for the official launch date and join the Suiperman
+                    revolution!</p>
+            </div>
+            <div class="speech-bubble" style="bottom: -60px; right: 20px">KABOOM!</div>
+        </div>
+
+        <!-- Super Meme Generator -->
+        <!-- <div class="section section-meme-generator fly-in parallax-section hover-glow" id="meme-generator">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-paint-brush"></i> Suiperman
+                Meme Generator</h2>
+            <p>Create viral $SUIPERMAN content with our Kryptonite-Proof tool! <span class="highlight">SOON</span></p>
+            <div class="meme-generator-preview">
+                <img src="assets/meme-generator.jpg" alt="Meme Generator Preview"
+                    style="width: 100%; max-height: 300px;" />
+            </div>
+            <a href="/meme-generator/meme-gen.html" class="join-button comic-text mt-4 link-meme">Get Early Access!</a>
+            <div class="speech-bubble" style="top: -60px; right: 20px">LOL!</div>
+        </div> -->
+
+        <!-- Community Hub -->
+        <div class="section section-community-hub fly-in hover-glow" id="community-hub">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-star"></i> Suiperman’s
+                Community Hub</h2>
+            <p>Join Suiperman’s mission with epic challenges! <span class="highlight">SOON</span></p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                <div
+                    class="flex items-center bg-white p-4 rounded-lg border-2 border-blue-600 hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-bullhorn text-blue-600 text-2xl mr-3"></i>
+                    <p class="text-black">Suiperman Meme Raids</p>
+                </div>
+                <div
+                    class="flex items-center bg-white p-4 rounded-lg border-2 border-blue-600 hover:scale-105 transition-transform duration-300">
+                    <i class="fab fa-twitter text-blue-600 text-2xl mr-3"></i>
+                    <p class="text-black">Twitter Spaces AMAs</p>
+                </div>
+                <div
+                    class="flex items-center bg-white p-4 rounded-lg border-2 border-blue-600 hover:scale-105 transition-transform duration-300">
+                    <i class="fab fa-telegram text-blue-600 text-2xl mr-3"></i>
+                    <p class="text-black">Telegram Meme Battles</p>
+                </div>
+                <div
+                    class="flex items-center bg-white p-4 rounded-lg border-2 border-blue-600 hover:scale-105 transition-transform duration-300">
+                    <i class="fas fa-gift text-blue-600 text-2xl mr-3"></i>
+                    <p class="text-black">Exclusive Kryptonite-Proof Airdrops</p>
+                </div>
+            </div>
+            <a href="#social" class="join-button comic-text mt-4 link-community">Join Now!</a>
+            <div class="speech-bubble" style="top: -60px; left: 20px">PARTY!</div>
+        </div>
+
+        <!-- Super Stats -->
+        <div class="section section-super-stats fly-in hover-glow" id="super-stats">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-chart-line"></i> X-Ray
+                Vision Metrics</h2>
+            <p>Key metrics for $SUIPERMAN!</p>
+            <div class="super-stats-preview">
+                <p>HODLers: <span class="highlight">SOON</span></p>
+                <p>Super-Speed Transactions: <span class="highlight">SOON</span></p>
+                <p>Market Cap: <span class="highlight">SOON</span></p>
+            </div>
+            <div  class="speech-bubble" style="top: -60px; left: 50%; transform: translateX(-50%)">STATS!</div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section section-faq fly-in hover-glow" id="faq">
+            <h2 class="comic-text text-2xl md:text-3xl text-white-400 mb-6"><i class="fas fa-question-circle"></i>
+                Suiperman’s FAQ</h2>
+            <div
+                class="bg-blue-100 p-6 rounded-xl border-3 border-black shadow-md hover:shadow-lg transition-all duration-300">
+                <div class="space-y-4">
+                    <div class="faq-item bg-white p-4 rounded-lg border-2 border-blue-600">
+                        <p class="text-black font-bold"><i class="fas fa-question mr-2 text-blue-600"></i> What is
+                            $SUIPERMAN?</p>
+                        <p class="text-black">A Superman-inspired meme coin on Sui blockchain.</p>
+                    </div>
+                    <div class="faq-item bg-white p-4 rounded-lg border-2 border-blue-600">
+                        <p class="text-black font-bold"><i class="fas fa-question mr-2 text-blue-600"></i> How does
+                            Suiperman save Sui?</p>
+                        <p class="text-black">Powers memes, NFTs, and community with fast transactions.</p>
+                    </div>
+                    <div class="faq-item bg-white p-4 rounded-lg border-2 border-blue-600">
+                        <p class="text-black font-bold"><i class="fas fa-question mr-2 text-blue-600"></i> How can I
+                            buy?</p>
+                        <p class="text-black">Launching soon on Moonbags.</p>
+                    </div>
+                    <div class="faq-item bg-white p-4 rounded-lg border-2 border-blue-600">
+                        <p class="text-black font-bold"><i class="fas fa-question mr-2 text-blue-600"></i> Is it safe?
+                        </p>
+                        <p class="text-black">Stable with strong liquidity and decentralization.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="speech-bubble" style="bottom: -60px; left: 20px">ANSWERS!</div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

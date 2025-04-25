@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemeGen - Create Your Meme Prompt</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+      color: white;
+      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .meme-generator {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #facc15;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="file"] {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #333;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .form-group input[type="text"]::placeholder {
+      color: #888;
+    }
+
+    .form-group span {
+      display: block;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 0.25rem;
+    }
+
+    .generate-btn {
+      background-color: #ff2d55;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .generate-btn:hover {
+      background-color: #e02448;
+    }
+
+    .preview-section {
+      margin-top: 2rem;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .preview-section h3 {
+      font-size: 1rem;
+      color: #00ffcc;
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-content {
+      background: #222;
+      padding: 1rem;
+      border-radius: 5px;
+      position: relative;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    .preview-content p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .preview-content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .preview-content::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 4px;
+    }
+
+    .preview-content::-webkit-scrollbar-track {
+      background: #333;
+    }
+
+    .copy-btn {
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .copy-btn:hover {
+      background-color: #2563eb;
+    }
+
+    @media (max-width: 600px) {
+      .meme-generator {
+        padding: 1rem;
+      }
+
+      .form-group label {
+        font-size: 1rem;
+      }
+
+      .generate-btn,
+      .copy-btn {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="meme-generator">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Enter meme title">
+      </div>
+      <div class="form-group">
+        <label for="description">Description (Optional)</label>
+        <input type="text" id="description" placeholder="Add any specific details (e.g., color, style)">
+      </div>
+      <div class="form-group">
+        <label for="image-upload">Upload Image</label>
+        <input type="file" id="image-upload" accept="image/*">
+        <span>(Optional: Upload an image for your meme)</span>
+      </div>
+      <button class="generate-btn" onclick="generatePrompt()">GENERATE PROMPT!</button>
+
+      <div class="preview-section">
+        <h3>AI PROMPT PREVIEW</h3>
+        <div class="preview-content">
+          <p id="prompt-preview">Create a high-quality internet meme using the provided image as the base. The meme should feature a bold title text: "[TITLE]" displayed prominently at the top center of the image. Use the classic Impact font, with the title text in white, a thick black outline (3px), and a subtle black drop shadow (2px offset) for maximum readability against any background. The title text size should be approximately 12% of the image height, but adjust dynamically to avoid overflow, wrapping the text naturally if it exceeds the image width. Below the title, include a humorous context or caption based on the provided description: "[DESCRIPTION]". If no description is provided, generate a witty caption that complements the title and image. Render this caption in a smaller font size (8% of image height), using Arial, in white with a thin black outline (1px), positioned at the bottom center with 5% padding from the bottom edge. Preserve the image's original aspect ratio, scaling it to fit within a 500x500 pixel canvas while maintaining quality. Ensure the background image is slightly darkened (10% opacity overlay) to make the text pop. If the description specifies colors or styles (e.g., neon pink text, bold style), apply those to the title and caption accordingly, while maintaining readability. The final meme should have a professional, humorous appearance, optimized for sharing on social media platforms like Twitter or Reddit.</p>
+        </div>
+        <button class="copy-btn" onclick="copyPromptAndOpenGrok()">Copy Prompt & Open Grok</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let imageData = null;
+
+    function updatePrompt() {
+      const title = document.getElementById('title').value || '[TITLE]';
+      const description = document.getElementById('description').value || '[DESCRIPTION]';
+      document.getElementById('prompt-preview').textContent = `Create a high-quality internet meme using the provided image as the base. The meme should feature a bold title text: "${title}" displayed prominently at the top center of the image. Use the classic Impact font, with the title text in white, a thick black outline (3px), and a subtle black drop shadow (2px offset) for maximum readability against any background. The title text size should be approximately 12% of the image height, but adjust dynamically to avoid overflow, wrapping the text naturally if it exceeds the image width. Below the title, include a humorous context or caption based on the provided description: "${description}". If no description is provided, generate a witty caption that complements the title and image. Render this caption in a smaller font size (8% of image height), using Arial, in white with a thin black outline (1px), positioned at the bottom center with 5% padding from the bottom edge. Preserve the image's original aspect ratio, scaling it to fit within a 500x500 pixel canvas while maintaining quality. Ensure the background image is slightly darkened (10% opacity overlay) to make the text pop. If the description specifies colors or styles (e.g., neon pink text, bold style), apply those to the title and caption accordingly, while maintaining readability. The final meme should have a professional, humorous appearance, optimized for sharing on social media platforms like Twitter or Reddit.`;
+    }
+
+    function generatePrompt() {
+      updatePrompt();
+    }
+
+    function copyPromptAndOpenGrok() {
+      const promptText = document.getElementById('prompt-preview').textContent;
+      navigator.clipboard.writeText(promptText).then(() => {
+        alert('Prompt copied to clipboard! Opening Grok in a new tab. Please paste the prompt there and upload your image manually.');
+        window.open('https://grok.com/', '_blank');
+      });
+    }
+
+    document.getElementById('title').addEventListener('input', updatePrompt);
+    document.getElementById('description').addEventListener('input', updatePrompt);
+
+    document.getElementById('image-upload').addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          imageData = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    updatePrompt();
+  </script>
+</body>
+</html>

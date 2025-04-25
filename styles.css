@@ -1,0 +1,1282 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a3a);
+    color: #fff;
+    position: relative;
+}
+
+h3 {
+    box-shadow: 0 0 15px rgba(0, 247, 210, 0.3);
+
+}
+
+p,
+li,
+a,
+.link-buy,
+h3 {
+    color: #1a1a3a;
+}
+
+.comic-text {
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    text-shadow: 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+}
+
+.bg-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+.shape {
+    position: absolute;
+    animation: float 12s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translateY(-60px) rotate(12deg) scale(1.2);
+    }
+}
+
+.shape-1 {
+    top: 10%;
+    left: 15%;
+    width: 80px;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    top: 60%;
+    left: 70%;
+    width: 60px;
+    animation-delay: -2s;
+}
+
+.shape-3 {
+    top: 30%;
+    left: 50%;
+    width: 100px;
+    animation-delay: -4s;
+}
+
+.shape-4 {
+    top: 80%;
+    left: 25%;
+    width: 70px;
+    animation-delay: -6s;
+}
+
+.shape-5 {
+    top: 20%;
+    left: 80%;
+    width: 90px;
+    animation-delay: -8s;
+}
+
+.shape-6 {
+    top: 50%;
+    left: 10%;
+    width: 85px;
+    animation-delay: -10s;
+}
+
+.shape-7 {
+    top: 70%;
+    left: 45%;
+    width: 75px;
+    animation-delay: -12s;
+}
+
+.shape-8 {
+    top: 15%;
+    left: 35%;
+    width: 65px;
+    animation-delay: -14s;
+}
+
+.shape-9 {
+    top: 85%;
+    left: 60%;
+    width: 95px;
+    animation-delay: -16s;
+}
+
+.shape-10 {
+    top: 40%;
+    left: 20%;
+    width: 70px;
+    animation-delay: -18s;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid #000;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px auto; /* Increased from 30px to 40px for more spacing */
+    max-width: 1000px;
+    box-shadow: 0 0 15px rgba(0, 247, 210, 0.3);
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.8s ease, scale 0.8s ease, background 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.section.fly-in {
+    opacity: 0;
+    transform: translateX(-200px) rotate(-10deg) scale(0.8);
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg) scale(1.1);
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: url('assets/speed-lines.jpg') center/cover;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.section:hover::before {
+    opacity: 0.4;
+}
+
+.section:hover {
+    box-shadow: 0 0 25px rgba(0, 247, 210, 0.5);
+    transform: translateY(-5px) scale(1.12);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+.blurred-locked {
+    position: relative;
+    filter: blur(5px);
+}
+
+.locked-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* Enhanced Milestone Climbing Style */
+.milestone-climb {
+    position: relative;
+    background: linear-gradient(to top, #1e3a8a, #60a5fa);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 4px solid #000;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.milestone-climb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff0000, #ffff00, #00ff00);
+    z-index: 0;
+    border-radius: 6px;
+}
+
+.milestone-card {
+    position: relative;
+    z-index: 1;
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 3px solid #000;
+    background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.milestone-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.milestone-card i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.milestone-card h3 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+}
+
+.milestone-card ul li {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.milestone-card ul li i {
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+}
+
+.suiperman-emblem {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 400px;
+    animation: glow 2s ease-in-out infinite;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.suiperman-emblem:hover {
+    transform: scale(1.1);
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px #00f7d2);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px #00f7d2);
+    }
+}
+
+.suiperman-emblem::before {
+    content: '';
+    background: url('assets/sui-emblem.jpg') no-repeat center;
+    background-size: contain;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flutter 4s ease-in-out infinite;
+}
+
+@keyframes flutter {
+
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(6deg);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 50px;
+    background: url('assets/hero-bg.jpg') center/cover;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 247, 210, 0.3);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.header:hover {
+    transform: scale(1.02);
+}
+
+.header h1 {
+    font-size: 5rem;
+    color: #ffff00;
+    animation: bounce 2s infinite;
+}
+
+.header p {
+    font-size: 2rem;
+    color: #ff0000;
+}
+
+
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    background: #1a1a3a;
+    padding: 15px;
+    z-index: 10;
+    border-bottom: 3px solid #00f7d2;
+    box-shadow: 0 3px 8px rgba(0, 247, 210, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffff00;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00f7d2;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 10px #00f7d2;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #ffff00;
+    order: 2;
+    cursor: pointer;
+}
+
+
+
+.social-links h2,
+.tokenomics h2,
+.roadmap h2,
+.utility h2,
+.how-to-buy h2,
+.meme-generator h2,
+.leaderboard h2,
+.battle-arena h2,
+.community-hub h2,
+.nft-gallery h2,
+.super-stats h2,
+.faq h2,
+.mission h2,
+.hype-meter h2 {
+    font-size: 3rem;
+    color: #ffff00;
+}
+
+.social-links p,
+.tokenomics p,
+.roadmap p,
+.utility p,
+.how-to-buy p,
+.meme-generator p,
+.leaderboard p,
+.battle-arena p,
+.community-hub p,
+.nft-gallery p,
+.super-stats p,
+.faq p,
+.mission p,
+.hype-meter p {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.social-links a,
+.how-to-buy a,
+.meme-generator a,
+.community-hub a,
+.nft-gallery a {
+    color: #0055ff;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover,
+.how-to-buy a:hover,
+.meme-generator a:hover,
+.community-hub a:hover,
+.nft-gallery a:hover {
+    color: #ffff00;
+    text-shadow: 0 0 8px #ffff00;
+    transform: scale(1.05);
+}
+
+.tokenomics ul,
+.roadmap ul,
+.community-hub ul,
+.faq ul,
+.mission ul {
+    list-style: disc;
+    padding-left: 50px;
+}
+
+.tokenomics li,
+.roadmap li,
+.community-hub li,
+.faq li,
+.mission li {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.roadmap h3,
+.mission h3 {
+    font-size: 1.75rem;
+    color: #ff0000;
+    margin-top: 20px;
+}
+
+.highlight {
+    color: #ff0000;
+}
+
+.suiperman-img {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.suiperman-img:hover {
+    transform: scale(1.05);
+}
+
+
+
+.speech-bubble {
+    position: absolute;
+    background: #ffff00;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 1.25rem;
+    color: #ff0000;
+    display: none;
+    z-index: 5;
+    transform: rotate(-5deg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.section:hover .speech-bubble {
+    display: block;
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0) rotate(-5deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(-5deg);
+    }
+}
+
+.meme-grid,
+.battle-arena-grid,
+.nft-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.meme-card,
+.battle-card,
+.nft-card {
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.3s ease;
+}
+
+.meme-card:hover,
+.battle-card:hover,
+.nft-card:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 15px #00f7d2;
+}
+
+.leaderboard-avatars {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #00f7d2;
+    animation: pulse 2s ease-in-out infinite;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.avatar:hover {
+    transform: scale(1.15);
+}
+
+
+.collectibles-grid,
+.marketplace-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.collectible-card,
+.marketplace-card {
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.3s ease;
+}
+
+.collectible-card:hover,
+.marketplace-card:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 0 15px #00f7d2;
+}
+
+.collectibles h2,
+.marketplace h2 {
+    font-size: 3rem;
+    color: #ffff00;
+}
+
+.collectibles p,
+.marketplace p {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.collectibles a,
+.marketplace a {
+    color: #0055ff;
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.collectibles a:hover,
+.marketplace a:hover {
+    color: #ffff00;
+    text-shadow: 0 0 8px #ffff00;
+    transform: scale(1.05);
+}
+
+.section-collectibles,
+.section-marketplace {
+    background: rgba(255, 255, 255, 0.89);
+}
+
+.section-collectibles:hover,
+.section-marketplace:hover {
+    transform: translateY(-5px) rotate(-1deg) scale(1.12);
+}
+
+.link-collectibles:hover,
+.link-marketplace:hover {
+    color: #00f7d2;
+}
+
+.collectible-card-1:hover,
+.marketplace-card-1:hover {
+    transform: scale(1.12) rotate(3deg);
+}
+
+.collectible-card-2:hover,
+.marketplace-card-2:hover {
+    transform: scale(1.12) rotate(-3deg);
+}
+
+.collectible-card-3:hover,
+.marketplace-card-3:hover {
+    transform: scale(1.12) rotate(2deg);
+}
+
+
+.hype-meter {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #1a1a3a;
+    padding: 15px;
+    z-index: 9;
+    border: 3px solid #00f7d2;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 247, 210, 0.3);
+    writing-mode: vertical-rl;
+    text-align: center;
+}
+
+.hype-meter.vibrate {
+    animation: vibrate 0.3s ease infinite;
+}
+
+@keyframes vibrate {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(2px);
+    }
+}
+
+.hype-meter-bar {
+    width: 30px;
+    height: 200px;
+    background: #1a1a3a;
+    border: 3px solid #00f7d2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.hype-meter-fill {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(180deg, #ff0000, #ffff00);
+    transition: height 0.5s ease;
+}
+
+.suiperman-signal {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: url('assets/sui-emblem.jpg') no-repeat center;
+    background-size: contain;
+    opacity: 0;
+    animation: signal 1s ease-in-out infinite;
+    display: none;
+}
+
+.hype-meter.active .suiperman-signal {
+    display: block;
+    opacity: 1;
+}
+
+@keyframes signal {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.2);
+    }
+}
+
+.hype-meter h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #ffff00;
+}
+
+
+
+.countdown {
+    font-size: 2rem;
+    color: #00f7d2;
+    text-align: center;
+    margin: 30px 0;
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #00f7d2;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #00f7d2;
+    }
+}
+
+.join-button {
+    display: inline-block;
+    background: #00f7d2;
+    color: #fffdfd;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.join-button:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 15px #ffff00;
+    background: #ffff00;
+}
+
+.join-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.join-button:hover::before {
+    left: 100%;
+}
+
+.meme-generator-preview,
+.super-stats-preview {
+    background: #1a1a3a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 247, 210, 0.3);
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.meme-generator-preview:hover,
+.super-stats-preview:hover {
+    transform: scale(1.05);
+}
+
+.parallax {
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+
+.parallax-section {
+    transform: translateZ(-0.3px) scale(1.3);
+    z-index: -1;
+}
+
+.comic-effect {
+    position: absolute;
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: #ffff00;
+    text-shadow: 2px 2px #000;
+    opacity: 0;
+    pointer-events: none;
+    animation: burst 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    transform-origin: center;
+}
+
+@keyframes burst {
+    0% {
+        opacity: 1;
+        transform: scale(0) rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) rotate(10deg);
+    }
+}
+
+.starburst {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('assets/starburst.jpg') center/cover;
+    opacity: 0;
+    pointer-events: none;
+    animation: burst 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.ripple {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(0, 247, 210, 0.4), transparent);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    animation: ripple 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 0.8;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+/* Adjusted .section-milestones to prevent overlap */
+.section-milestones {
+    background: rgba(255, 255, 255, 0.96);
+    border: 4px solid #000;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 110px auto; /* Increased margin to ensure separation */
+    max-width: 1000px;
+    box-shadow: 0 0 15px rgba(0, 247, 210, 0.3);
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.8s ease, scale 0.8s ease, background 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Reduce hover transform to minimize overlap */
+.section-milestones:hover {
+    box-shadow: 0 0 25px rgba(0, 247, 210, 0.5);
+    transform: translateY(-5px) scale(1.05); /* Reduced scale from 1.12 to 1.05 */
+    background: rgba(255, 255, 255, 0.98);
+}
+
+/* Adjusted milestone-climb to prevent overflow */
+.milestone-climb {
+    position: relative;
+    background: linear-gradient(to top, #1e3a8a, #60a5fa);
+    padding: 1.5rem; /* Reduced from 2.5rem to ensure containment */
+    margin: 1rem 0; /* Reduced from 2rem to align with section spacing */
+    border-radius: 20px;
+    border: 4px solid #000;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+/* Ensure the ::before pseudo-element is contained */
+.milestone-climb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff0000, #ffff00, #00ff00);
+    z-index: 0;
+    border-radius: 6px;
+}
+
+/* Adjusted milestone-card to reduce hover movement */
+.milestone-card {
+    position: relative;
+    z-index: 1;
+    margin: 1.5rem 0; /* Adjusted for consistent spacing */
+    padding: 1rem;
+    border-radius: 15px;
+    border: 3px solid #000;
+    background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Reduced hover transform to prevent overlap */
+.milestone-card:hover {
+    transform: translateY(-6px); /* Reduced from -12px to -6px */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Existing milestone-card sub-styles */
+.milestone-card i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.milestone-card h3 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+}
+
+.milestone-card ul li {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.milestone-card ul li i {
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+}
+
+.section-milestones .speech-bubble {
+    bottom: -50px; /* Reduced to avoid extending too far */
+    z-index: 2; /* Ensure it’s below milestone cards */
+}
+/* Additional Styles for Code Expansion */
+.section-social {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.section-tokenomics {
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.section-roadmap {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.section-utility {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.section-how-to-buy {
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.section-meme-generator {
+    background: rgba(255, 255, 255, 0.93);
+}
+
+.section-leaderboard {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.section-battle-arena {
+    background: rgba(255, 255, 255, 0.91);
+}
+
+.section-community-hub {
+    background: rgba(255, 255, 255, 0.90);
+}
+
+.section-nft-gallery {
+    background: rgba(255, 255, 255, 0.89);
+}
+
+.section-super-stats {
+    background: rgba(255, 255, 255, 0.88);
+}
+
+.section-faq {
+    background: rgba(255, 255, 255, 0.87);
+}
+
+.section-mission {
+    background: rgba(255, 255, 255, 0.86);
+}
+
+.section-social:hover {
+    transform: translateY(-5px) rotate(1deg) scale(1.12);
+}
+
+.section-tokenomics:hover {
+    transform: translateY(-5px) rotate(-1deg) scale(1.12);
+}
+
+.section-roadmap:hover {
+    transform: translateY(-5px) rotate(2deg) scale(1.12);
+}
+
+.section-utility:hover {
+    transform: translateY(-5px) rotate(-2deg) scale(1.12);
+}
+
+.section-how-to-buy:hover {
+    transform: translateY(-5px) rotate(1deg) scale(1.12);
+}
+
+.section-meme-generator:hover {
+    transform: translateY(-5px) rotate(-1deg) scale(1.12);
+}
+
+.section-leaderboard:hover {
+    transform: translateY(-5px) rotate(2deg) scale(1.12);
+}
+
+.section-battle-arena:hover {
+    transform: translateY(-5px) rotate(-2deg) scale(1.12);
+}
+
+.section-community-hub:hover {
+    transform: translateY(-5px) rotate(1deg) scale(1.12);
+}
+
+.section-nft-gallery:hover {
+    transform: translateY(-5px) rotate(-1deg) scale(1.12);
+}
+
+.section-super-stats:hover {
+    transform: translateY(-5px) rotate(2deg) scale(1.12);
+}
+
+.section-faq:hover {
+    transform: translateY(-5px) rotate(-2deg) scale(1.12);
+}
+
+.section-mission:hover {
+    transform: translateY(-5px) rotate(1deg) scale(1.12);
+}
+
+.link-social {
+    font-weight: 600;
+}
+
+.link-buy {
+    font-weight: 700;
+}
+
+.link-meme {
+    font-weight: 500;
+}
+
+.link-community {
+    font-weight: 600;
+}
+
+.link-nft {
+    font-weight: 700;
+}
+
+.link-mission {
+    font-weight: 600;
+}
+
+.link-social:hover {
+    color: #ff0000;
+}
+
+.link-buy:hover {
+    color: #00f7d2;
+}
+
+.link-meme:hover {
+    color: #ffff00;
+}
+
+.link-community:hover {
+    color: #ff0000;
+}
+
+.link-nft:hover {
+    color: #00f7d2;
+}
+
+.link-mission:hover {
+    color: #ffff00;
+}
+
+.meme-card-1 {
+    background: rgba(255, 255, 255, 0.99);
+}
+
+.meme-card-2 {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.meme-card-3 {
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.battle-card-1 {
+    background: rgba(255, 255, 255, 0.99);
+}
+
+.battle-card-2 {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.battle-card-3 {
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.battle-card-4 {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.battle-card-5 {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.nft-card-1 {
+    background: rgba(255, 255, 255, 0.99);
+}
+
+.nft-card-2 {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.nft-card-3 {
+    background: rgba(255, 255, 255, 0.97);
+}
+
+.nft-card-4 {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.meme-card-1:hover {
+    transform: scale(1.12) rotate(3deg);
+}
+
+.meme-card-2:hover {
+    transform: scale(1.12) rotate(-3deg);
+}
+
+.meme-card-3:hover {
+    transform: scale(1.12) rotate(2deg);
+}
+
+.battle-card-1:hover {
+    transform: scale(1.12) rotate(3deg);
+}
+
+.battle-card-2:hover {
+    transform: scale(1.12) rotate(-3deg);
+}
+
+.battle-card-3:hover {
+    transform: scale(1.12) rotate(2deg);
+}
+
+.battle-card-4:hover {
+    transform: scale(1.12) rotate(-2deg);
+}
+
+.battle-card-5:hover {
+    transform: scale(1.12) rotate(1deg);
+}
+
+.nft-card-1:hover {
+    transform: scale(1.12) rotate(3deg);
+}
+
+.nft-card-2:hover {
+    transform: scale(1.12) rotate(-3deg);
+}
+
+.nft-card-3:hover {
+    transform: scale(1.12) rotate(2deg);
+}
+
+.nft-card-4:hover {
+    transform: scale(1.12) rotate(-2deg);
+}
+
+
+/* Noomo-inspired Effects */
+.cursor-trail {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 247, 210, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0;
+}
+
+.cursor-trail.active {
+    opacity: 1;
+}
+
+.hover-glow {
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.hover-glow:hover {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 247, 210, 0.7));
+    transform: scale(1.05);
+}
+
+.link-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.link-hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: #ffff00;
+    transition: width 0.3s ease;
+}
+
+.link-hover:hover::after {
+    width: 100%;
+}
