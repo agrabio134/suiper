@@ -130,17 +130,17 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
 });
 
 // Dynamic Link Effects (excluding hamburger)
-const links = document.querySelectorAll('a:not(.hamburger *)');
-links.forEach(link => {
-    link.addEventListener('mouseover', () => {
-        link.style.color = '#000';
-        link.style.textShadow = '0 0 8px #ffff00';
-    });
-    link.addEventListener('mouseout', () => {
-        link.style.color = link.classList.contains('join-button') ? '#000' : '#0055ff';
-        link.style.textShadow = 'none';
-    });
-});
+// const links = document.querySelectorAll('a:not(.hamburger *)');
+// links.forEach(link => {
+//     link.addEventListener('mouseover', () => {
+//         link.style.color = '#000';
+//         link.style.textShadow = '0 0 8px #ffff00';
+//     });
+//     link.addEventListener('mouseout', () => {
+//         link.style.color = link.classList.contains('join-button') ? '#000' : '#0055ff';
+//         link.style.textShadow = 'none';
+//     });
+// });
 
 // Button Click Animation
 const buttons = document.querySelectorAll('.join-button');
@@ -208,3 +208,13 @@ document.addEventListener('touchstart', (e) => {
     });
     e.target.dispatchEvent(event);
 });
+
+
+function copyToClipboard() {
+    const caText = document.getElementById('contract-address').textContent;
+    navigator.clipboard.writeText(caText).then(() => {
+        alert('Contract Address copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
